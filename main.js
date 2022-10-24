@@ -2,9 +2,8 @@
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
-
 fetch(url)
-.then(res => res.json)
+.then(res => res)
 .catch(function (error){
 
   let element = document.getElementById("modal");
@@ -13,12 +12,16 @@ fetch(url)
   console.log(error);
 });
 
-let timeout;
+setTimeOut(function timeout(){
+  console.log("hidden");
+}, 3000);
 
-function
-
-
-
+let heart = document.getElementsByClassName('like-glyph');
+heart.addEventListener('click',()=>{
+    if(heart.classList.contains('FULL_HEART')){
+        heart.classList.remove('EMPTY_HEART');
+    }
+});
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
