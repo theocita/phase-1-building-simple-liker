@@ -2,7 +2,20 @@
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
-// Your JavaScript code goes here!
+
+fetch(url)
+.then(res => res.json)
+.catch(function (error){
+
+  let element = document.getElementById("modal");
+  element.classList.remove("hidden");
+
+  console.log(error);
+});
+
+let timeout;
+
+function
 
 
 
